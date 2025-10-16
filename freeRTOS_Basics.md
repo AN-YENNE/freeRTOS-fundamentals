@@ -1,5 +1,4 @@
 What is an RTOS?
-
 A Real-Time Operating System (RTOS) is a specialized OS that enables deterministic task scheduling with guaranteed response times. 
 
 Unlike general-purpose OSs, it focuses on predictability and timing constraints, critical for embedded applications such as motor control, data acquisition, or communication systems.
@@ -11,7 +10,7 @@ Key Characteristics:
 3. **Minimal latency**.
 4. Support for **inter-task communication** and **resource synchronization**.
 
-
+--------------
 
 What is FreeRTOS?
 
@@ -23,7 +22,7 @@ FreeRTOS is an open-source real-time operating system kernel for embedded device
 4. Rich feature set: tasks, queues, semaphores, timers, etc.
 5. Large community and official support from Espressif for ESP32.
 
-
+-------------------
 
 Why Use FreeRTOS with ESP32?
 
@@ -31,7 +30,7 @@ ESP32 is a dual-core Xtensa microcontroller with built-in Wi-Fi and Bluetooth. F
 
 ESP-IDF, Espressif’s official development framework, integrates FreeRTOS by default. That means no extra installation is needed, you're ready to write multitasking code out of the box.
 
-
+-------------------
 
 What’s Under the Hood?
 
@@ -40,7 +39,7 @@ What’s Under the Hood?
 3. The main application runs as a FreeRTOS task.
 4. ESP-IDF sets up system tasks for Wi-Fi, Bluetooth, and other components.
 
-
+----------------------
 
 ESP-IDF and FreeRTOS Integration:
 
@@ -50,9 +49,7 @@ You don’t need to install FreeRTOS separately when using ESP-IDF. It's tightly
 2. Managed by CMake in CMakeLists.txt.
 3. Configurable viamenuconfig → Component config → FreeRTOS.
 
-
-
-Tag2
+------------------------------------2---
 
 Why Use VS Code with ESP-IDF?
 
@@ -67,7 +64,7 @@ While ESP-IDF works great from the command line, Visual Studio Code offers:
 
 The official Espressif plugin makes VS Code a powerful tool for FreeRTOS-based embedded development.
 
-
+----------
 
 Install the ESP-IDF Extension:
 
