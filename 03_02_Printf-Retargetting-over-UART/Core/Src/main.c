@@ -1,9 +1,9 @@
 /*===========================
- *     Basic FreeRTOS Demo
+ *    Basic FreeRTOS Demo
  *    STM32 Nucleo (F Series)
  *===========================*/
 
-/* TODO 1: Include stdio.h so we can use printf() */
+/* TODO 1: Include stdio.h so we can use printf() function*/
 #include <stdio.h>
 
 #include "main.h"
@@ -25,8 +25,8 @@ void StartDefaultTask(void const * argument);
  *===========================================*/
 int __io_putchar(int ch)
 {
-    HAL_UART_Transmit(&huart2, (uint8_t *)&ch, 1, 100);  // Send one character over UART
-    return ch;
+    HAL_UART_Transmit(&huart2 /*UART handle address*/, (uint8_t *)&ch/*Char to write*/, 1/*no.of chars to write*/, 100/*time to try before timeout*/);  // Send one character over UART
+    return ch; //on success, returns char
 }
 
 /*==============================
@@ -47,7 +47,7 @@ int main(void)
     while (1)
     {
         /* TODO 3: Test printf retargeting */
-        printf("Hello from STM32\n\r");  // Send string over UART
+        printf("Hello from STM32F411RE\n\r");  // Send string over UART
         HAL_Delay(500);                 // Wait 500 ms
     }
 }
